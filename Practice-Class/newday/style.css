@@ -1,0 +1,37 @@
+/* div.beforetext{
+    background-color: blue;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 20px;
+} */
+main>p::before{
+    background-color: blue;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 20px;
+    position: absolute;
+    
+}
+main>p{
+    background-color: royalblue;
+    /* border-radius: 20px; */
+    /* -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px; */
+    position: relative;
+    color: white;
+   
+}
+
+main>p::after{
+    background-color: rgb(224, 106, 37);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 20px;
+    content:"\00AB heyy there.....could my life get any better \00AB";
+    color: yellow;
+
+    display: block;
+    
+}
