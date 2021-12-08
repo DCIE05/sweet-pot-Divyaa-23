@@ -10,18 +10,20 @@ function Cardviewer(props) {
   const [state, setState] = useState(true);
 
   const nextCard = () => {
-    if (count === props.result.length - 1 || !state) {
+    if (count === props.result.length - 1) {
       setCounter(0);
     } else {
       setCounter(count + 1);
+      setState(true);
     }
   };
 
   const prevCard = () => {
-    if (count === 0 || !state) {
+    if (count === 0) {
       setCounter(props.result.length-1);
     } else {
       setCounter(count - 1);
+      setState(true);
     }
   };
 
@@ -39,7 +41,7 @@ function Cardviewer(props) {
       <h1>Card Viewer</h1>
       <div className="ViewerBox" onClick={handleClick}>
         {/*    <h1>{state ? props.result[count][0] : props.result[count][1]}</h1> */}
-        <h1>{JSON.parse(currentCard)}</h1>
+        <h1>{currentCard?JSON.parse(currentCard):""}</h1>
       </div>
       <div className="NextPrevButtons">
         <button onClick={prevCard}>Prev Card</button>

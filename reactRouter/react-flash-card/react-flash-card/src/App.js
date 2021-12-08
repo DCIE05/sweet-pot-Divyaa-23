@@ -22,7 +22,7 @@ function App() {
 
   //set input to localStorage
   useEffect(() => {
-    if (result.length > 0) {
+    if (result.length >= 0) {
       localStorage.setItem("frontBack", JSON.stringify(result));
     }
   }, [result]);
@@ -48,7 +48,7 @@ function App() {
           />
           <Route path="/Cardviewer" element={<Cardviewer result={result} />} />
 
-          {/* <Route path="*" element={<App/>} /> */}
+          <Route path="*" element={<App/>} /> 
         </Routes>
       </div>
     </HashRouter>
